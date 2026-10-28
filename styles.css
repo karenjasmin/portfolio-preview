@@ -636,3 +636,14 @@ body { color: var(--charcoal); }
 .skills-group { border: 2px solid transparent; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
 .skills-group:hover { border-color: #b87333; box-shadow: 0 10px 24px rgba(34,34,34,.08); transform: translateY(-2px); }
 @media (prefers-reduced-motion: reduce) { .featured-card, .skills-group { transition: none; } .featured-card:hover, .featured-card:focus-within, .skills-group:hover { transform: none; } }
+
+/* Visible copper edge highlight without changing card contents */
+.featured-work .featured-card:hover,
+.featured-work .featured-card:focus-within {
+  border-color: #b87333;
+  box-shadow: inset 0 0 0 2px #b87333, 0 12px 28px rgba(34,34,34,.10);
+}
+.skills .skills-group:hover {
+  border-color: #b87333;
+  box-shadow: inset 0 0 0 2px #b87333, 0 10px 24px rgba(34,34,34,.08);
+}
