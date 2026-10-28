@@ -494,3 +494,17 @@ body { color: var(--charcoal); }
 .abstract-panels span { width: 35%; height: 28px; border-radius: 4px; background: #c68a57; }
 @media (max-width: 800px) { .featured-work { padding: 72px 24px; } .featured-cards { grid-template-columns: 1fr; } .featured-card-media { height: 230px; } }
 @media (max-width: 420px) { .featured-work { padding: 64px 16px; } .featured-card-body { padding: 24px; } }
+
+/* Selected Work — compact Figma-style cards, overrides prior featured styles */
+.featured-work { padding: 76px 24px 84px; background: #fff; }
+.featured-work h2 { font-size: clamp(30px,3.4vw,42px); margin: 0 0 16px; letter-spacing: -.035em; }
+.featured-work .featured-intro { max-width: 700px; font-size: 16px; line-height: 1.65; margin: 0 0 34px; }
+.featured-work .featured-cards { gap: 24px; align-items: stretch; }
+.featured-work .featured-card { background: #f5f1ec; border: 0; border-radius: 10px; min-height: 285px; box-shadow: none; }
+.featured-work .featured-card-body { padding: 32px; }
+.featured-work .featured-index { margin: 0 0 13px; color: #ad692f; font-size: 12px; letter-spacing: .06em; }
+.featured-work .featured-card h3 { font-size: clamp(22px,2.1vw,28px); line-height: 1.2; margin: 0 0 16px; }
+.featured-work .featured-card-body > p:not(.featured-index) { font-size: 15px; line-height: 1.65; margin: 0 0 24px; }
+.featured-work .featured-link-note { display: block; margin-top: auto; font-size: 13px; color: #9b602e; font-weight: 700; }
+@media (max-width:800px) { .featured-work { padding: 68px 24px; } .featured-work .featured-card { min-height: 0; } }
+@media (max-width:420px) { .featured-work { padding: 60px 16px; } .featured-work .featured-card-body { padding: 25px; } }
