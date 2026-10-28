@@ -615,3 +615,14 @@ body { color: var(--charcoal); }
 .contact .contact-email { margin: 0; font-size: 13px; color: #756c63; line-height: 1.6; }
 .contact .contact-email a { color: #8b5125; text-underline-offset: 3px; }
 @media (max-width: 420px) { .contact { padding: 70px 16px 78px; } }
+
+/* Minimal light footer */
+.site-footer { padding: 32px 24px; background: #f5f1ec; color: #625b54; border-top: 1px solid #e7ded4; }
+.site-footer .footer-inner { max-width: 1100px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-footer .footer-identity { display: flex; flex-direction: column; gap: 7px; }
+.site-footer .footer-name { color: #222; font-size: 18px; font-weight: 750; letter-spacing: -.02em; }
+.site-footer .footer-identity p { color: #756c63; font-size: 12px; line-height: 1.5; }
+.site-footer .footer-links { display: flex; align-items: center; gap: 24px; }
+.site-footer .footer-links a { color: #51463d; font-size: 14px; font-weight: 600; text-decoration: none; }
+.site-footer .footer-links a:hover, .site-footer .footer-links a:focus-visible { color: #a4622e; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 520px) { .site-footer .footer-inner { align-items: flex-start; flex-direction: column; gap: 20px; } }
