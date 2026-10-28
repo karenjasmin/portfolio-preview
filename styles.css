@@ -522,3 +522,11 @@ body { color: var(--charcoal); }
 .mini-browser-tiles { display: flex; gap: 8px; margin-top: 12px; }
 .mini-browser-tiles span { width: 29%; height: 25px; background: #e3c6a8; border-radius: 3px; }
 .featured-work .featured-card:nth-child(2) .mini-browser-tiles span { background: #c8c0b5; }
+
+/* Three selected projects, with compact image previews */
+@media (min-width: 1000px) { .featured-work .featured-cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); } }
+.featured-work .featured-card-body { height: 100%; display: flex; flex-direction: column; }
+.featured-work .featured-card-body > p:not(.featured-index) { flex: 1; }
+.featured-real-preview img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.featured-work a.featured-link-note { text-decoration: none; }
+.featured-work a.featured-link-note:hover { text-decoration: underline; }
