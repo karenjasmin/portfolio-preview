@@ -582,3 +582,12 @@ body { color: var(--charcoal); }
 .skills .skill-tools-label { display: block; margin-bottom: 12px; color: #a4622e; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .skills .skill-tool-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .skills .skill-tool-tags span { display: inline-block; padding: 7px 10px; background: #fff; border: 1px solid #e7d8ca; border-radius: 6px; color: #51463d; font-size: 12px; line-height: 1.4; }
+
+/* About section — Figma-inspired two-column introduction */
+.about { padding: 92px 24px 100px; background: #fff; }
+.about .about-grid { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 72px; align-items: start; }
+.about h2 { font-size: clamp(32px,3.7vw,46px); line-height: 1.15; letter-spacing: -.035em; color: #222; }
+.about .about-copy p { font-size: 16px; line-height: 1.8; margin: 0 0 20px; color: #625b54; }
+.about .about-copy p:last-child { margin-bottom: 0; }
+@media (max-width: 800px) { .about { padding: 70px 24px; } .about .about-grid { grid-template-columns: 1fr; gap: 26px; } }
+@media (max-width: 420px) { .about { padding: 60px 16px; } }
