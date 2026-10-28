@@ -562,3 +562,15 @@ body { color: var(--charcoal); }
 .skills .skills-group p { margin: 0; color: #625b54; font-size: 15px; line-height: 1.75; }
 @media (max-width: 800px) { .skills .skills-grid { grid-template-columns: 1fr; } .skills { padding: 68px 24px; } }
 @media (max-width: 420px) { .skills { padding: 60px 16px; } .skills .skills-group { padding: 26px; } }
+
+/* Tools I Work With */
+.tools-section { padding: 78px 24px 86px; background: #f5f1ec; }
+.tools-inner { max-width: 1100px; margin: 0 auto; }
+.tools-section h2 { margin: 0 0 14px; color: #222; font-size: clamp(30px,3.4vw,42px); letter-spacing: -.035em; line-height: 1.15; }
+.tools-intro { max-width: 690px; margin: 0 0 36px; color: #625b54; font-size: 16px; line-height: 1.7; }
+.tools-groups { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+.tools-group h3 { margin: 0 0 17px; color: #222; font-size: 18px; line-height: 1.3; }
+.tool-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+.tool-tags span { display: inline-flex; align-items: center; padding: 9px 13px; background: #fff; border: 1px solid #e7d8ca; border-radius: 7px; color: #4d4238; font-size: 13px; line-height: 1.35; }
+@media (max-width: 800px) { .tools-groups { grid-template-columns: 1fr; gap: 30px; } .tools-section { padding: 65px 24px; } }
+@media (max-width: 420px) { .tools-section { padding: 60px 16px; } }
