@@ -591,3 +591,8 @@ body { color: var(--charcoal); }
 .about .about-copy p:last-child { margin-bottom: 0; }
 @media (max-width: 800px) { .about { padding: 70px 24px; } .about .about-grid { grid-template-columns: 1fr; gap: 26px; } }
 @media (max-width: 420px) { .about { padding: 60px 16px; } }
+
+/* About: align heading and copy in one left-aligned column */
+.about .about-grid { display: block; max-width: 790px; }
+.about .about-grid h2 { margin: 0 0 28px; }
+.about .about-copy { max-width: 790px; }
