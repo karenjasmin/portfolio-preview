@@ -574,3 +574,11 @@ body { color: var(--charcoal); }
 .tool-tags span { display: inline-flex; align-items: center; padding: 9px 13px; background: #fff; border: 1px solid #e7d8ca; border-radius: 7px; color: #4d4238; font-size: 13px; line-height: 1.35; }
 @media (max-width: 800px) { .tools-groups { grid-template-columns: 1fr; gap: 30px; } .tools-section { padding: 65px 24px; } }
 @media (max-width: 420px) { .tools-section { padding: 60px 16px; } }
+
+/* Combined service cards and relevant tools */
+.skills .skills-group { display: flex; flex-direction: column; min-width: 0; }
+.skills .skills-group .skill-description { margin: 0 0 24px; flex: 1; color: #625b54; font-size: 15px; line-height: 1.65; }
+.skills .skill-tools { border-top: 1px solid #ded1c3; padding-top: 18px; }
+.skills .skill-tools-label { display: block; margin-bottom: 12px; color: #a4622e; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.skills .skill-tool-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skills .skill-tool-tags span { display: inline-block; padding: 7px 10px; background: #fff; border: 1px solid #e7d8ca; border-radius: 6px; color: #51463d; font-size: 12px; line-height: 1.4; }
