@@ -604,3 +604,14 @@ body { color: var(--charcoal); }
 .contact p { max-width: 690px; margin: 0 0 30px; color: #625b54; font-size: 16px; line-height: 1.75; }
 @media (max-width: 800px) { .contact { padding: 72px 24px; } }
 @media (max-width: 420px) { .contact { padding: 60px 16px; } }
+
+/* Centered contact call to action */
+.contact { background: #f5f1ec; padding: 90px 24px 98px; text-align: center; color: #222; }
+.contact .contact-inner { max-width: 650px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+.contact .contact-kicker { margin: 0 0 16px; color: #a4622e; font-size: 12px; font-weight: 800; letter-spacing: .12em; line-height: 1.5; }
+.contact h2 { margin: 0 0 20px; max-width: none; font-size: clamp(34px,4vw,48px); color: #222; }
+.contact .contact-inner > p:not(.contact-kicker):not(.contact-email) { max-width: 510px; margin: 0 0 28px; color: #625b54; font-size: 16px; line-height: 1.75; }
+.contact .contact-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 22px; }
+.contact .contact-email { margin: 0; font-size: 13px; color: #756c63; line-height: 1.6; }
+.contact .contact-email a { color: #8b5125; text-underline-offset: 3px; }
+@media (max-width: 420px) { .contact { padding: 70px 16px 78px; } }
