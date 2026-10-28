@@ -508,3 +508,17 @@ body { color: var(--charcoal); }
 .featured-work .featured-link-note { display: block; margin-top: auto; font-size: 13px; color: #9b602e; font-weight: 700; }
 @media (max-width:800px) { .featured-work { padding: 68px 24px; } .featured-work .featured-card { min-height: 0; } }
 @media (max-width:420px) { .featured-work { padding: 60px 16px; } .featured-work .featured-card-body { padding: 25px; } }
+
+/* Small embedded browser previews inside Selected Work cards */
+.featured-work .featured-card { overflow: visible; }
+.featured-mini-preview { width: min(100%, 320px); height: 142px; margin: 0 0 25px; border: 1px solid #d5c7b7; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 5px 12px rgba(34,34,34,.06); }
+.mini-browser-bar { height: 27px; display: flex; align-items: center; gap: 5px; padding: 0 10px; background: #e9e2d9; border-bottom: 1px solid #ddd2c4; }
+.mini-browser-bar i { display: block; width: 6px; height: 6px; background: #b7aa9c; border-radius: 50%; }
+.mini-browser-bar span { margin: 0 auto; font-size: 9px; color: #786b5d; }
+.mini-browser-page { padding: 15px 19px; }
+.mini-browser-page b { display: block; width: 61%; height: 12px; background: #39322d; border-radius: 2px; margin-bottom: 10px; }
+.mini-browser-page em { display: block; width: 88%; height: 5px; margin: 6px 0; background: #ded5cb; border-radius: 2px; }
+.mini-browser-page em + em { width: 66%; }
+.mini-browser-tiles { display: flex; gap: 8px; margin-top: 12px; }
+.mini-browser-tiles span { width: 29%; height: 25px; background: #e3c6a8; border-radius: 3px; }
+.featured-work .featured-card:nth-child(2) .mini-browser-tiles span { background: #c8c0b5; }
