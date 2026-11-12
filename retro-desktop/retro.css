@@ -83,3 +83,7 @@ body.retro-ready .retro-desktop::after,
 body.retro-ready .retro-sky-cloud {
   display: none;
 }
+
+/* Native XP icon image files: keep their original square proportions. */
+.retro-shortcut img { display:block; width:48px; height:48px; object-fit:contain; image-rendering:auto; filter:drop-shadow(1px 2px 1px rgba(0,0,0,.28)); }
+@media(max-width:700px){.retro-shortcut img{width:40px;height:40px}}
