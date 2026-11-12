@@ -158,13 +158,23 @@
     tabButtons.forEach((b,key)=>b.setAttribute("aria-pressed",String(key===filter)));
   }
   setFilter();
-  // The Posts navigation shows SEO only; the physical nodes remain in Pages table.
+  // Posts uses the SEO entries in a familiar WordPress list-table layout.
   const postsView=view("posts");
   heading(postsView,"Posts","SEO projects and content optimization");
-  const postsGuide=el("p","wp-original-intro","SEO projects are shown in the Pages list using the SEO projects filter.");
-  const postsOpen=el("button","wp-blue-button","View SEO Projects");
-  postsOpen.type="button";postsOpen.addEventListener("click",()=>show("pages","seo"));
-  postsView.append(postsGuide,postsOpen);
+  const postCount=rows.filter(row=>row.dataset.category==="seo").length;
+  postsView.append(el("p","wp-original-intro",postCount+" published "+(postCount===1?"post":"posts")));
+  const postHead=el("div","wp-table-head");
+  ["Title","Category","Status"].forEach(t=>postHead.append(el("span","",t)));
+  postsView.append(postHead);
+  const postTable=el("div","wp-list-table");
+  postTable.setAttribute("role","list");
+  rows.filter(row=>row.dataset.category==="seo").forEach(row=>{
+    const clone=row.cloneNode(true);
+    clone.style.display="grid";
+    clone.hidden=false;
+    postTable.append(clone);
+  });
+  postsView.append(postTable);
 
   const pluginsView=view("plugins");
   heading(pluginsView,"Plugins","Skills and tools");
@@ -184,7 +194,6 @@
   if(footer)contactView.append(footer);
 
   function show(key, chosenFilter){
-    if(key==="posts"){filter="seo";setFilter();key="pages";}
     if(key==="pages" && chosenFilter){filter=chosenFilter;setFilter();}
     if(key!=="pages" && key!=="dashboard" && !view(key))return;
     active=key;
