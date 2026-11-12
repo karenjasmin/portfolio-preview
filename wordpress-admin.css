@@ -1,0 +1,102 @@
+/* WordPress admin-inspired portfolio experiment. UI only; no WordPress backend. */
+:root{--wp-dark:#1d2327;--wp-sidebar:#23282d;--wp-blue:#2271b1;--wp-blue-hover:#135e96;--wp-bg:#f0f0f1;--wp-border:#c3c4c7;--wp-txt:#1d2327}
+html{scroll-behavior:auto!important}
+body.wp-sim-ready{margin:0;overflow:hidden;color:var(--wp-txt);background:var(--wp-bg);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body.wp-sim-ready > .site-nav,body.wp-sim-ready > .hero,body.wp-sim-ready > .featured-work,body.wp-sim-ready > .skills,body.wp-sim-ready > .about,body.wp-sim-ready > .contact,body.wp-sim-ready > .site-footer,body.wp-sim-ready > .back-to-top{display:none!important}
+#wp-sim{position:fixed;inset:0;display:flex;flex-direction:column;color:var(--wp-txt);font-size:14px;background:var(--wp-bg)}
+#wp-sim *{box-sizing:border-box}
+#wp-sim button,#wp-sim a{font:inherit}
+#wp-sim button{cursor:pointer}
+#wp-sim .wp-topbar{height:32px;min-height:32px;background:#1d2327;color:#f0f0f1;display:flex;justify-content:space-between;align-items:center;padding:0 15px;font:13px Arial,sans-serif}
+#wp-sim .wp-topbar .wp-top-left,#wp-sim .wp-topbar .wp-top-right{display:flex;align-items:center;gap:18px}
+#wp-sim .wp-topbar span,#wp-sim .wp-topbar a{color:#f0f0f1;text-decoration:none}
+#wp-sim .wp-wp-logo{font:bold 19px Georgia,serif;border:1.5px solid #f0f0f1;border-radius:50%;width:23px;height:23px;line-height:20px;text-align:center;display:inline-block}
+#wp-sim .wp-site-name{font-weight:500}
+#wp-sim .wp-shell{display:flex;flex:1;min-height:0;overflow:hidden}
+#wp-sim .wp-sidebar{width:188px;flex:none;background:var(--wp-sidebar);color:#f0f0f1;overflow:auto;padding:10px 0}
+#wp-sim .wp-side-link{display:flex;width:100%;align-items:center;gap:11px;text-align:left;padding:10px 13px;color:#f0f0f1;background:transparent;border:0;border-left:4px solid transparent;line-height:1.25}
+#wp-sim .wp-side-link svg{width:19px;height:19px;flex:none;opacity:.86}
+#wp-sim .wp-side-link:hover,#wp-sim .wp-side-link:focus-visible{background:#191e23;color:#72aee6;outline:none}
+#wp-sim .wp-side-link[aria-current="page"]{background:#2271b1;border-left-color:#72aee6;color:#fff;font-weight:600}
+#wp-sim .wp-side-divider{margin:9px 13px;border-top:1px solid #4b5155}
+#wp-sim .wp-main{flex:1;min-width:0;overflow:auto;padding:24px 32px 55px;background:#f0f0f1}
+#wp-sim .wp-view{display:none;max-width:1350px;margin:0 auto}
+#wp-sim .wp-view.is-current{display:block}
+#wp-sim .wp-heading{font-weight:400;font-size:23px;line-height:1.35;margin:0 0 17px;color:#1d2327}
+#wp-sim .wp-subtitle{color:#646970;font-size:13px;margin:-8px 0 18px}
+#wp-sim .wp-panel{background:#fff;border:1px solid var(--wp-border);box-shadow:0 1px 1px rgba(0,0,0,.04);margin:0 0 19px}
+#wp-sim .wp-panel-title{font-weight:600;font-size:14px;padding:12px 14px;margin:0;border-bottom:1px solid #dcdcde}
+#wp-sim .wp-panel-body{padding:18px}
+#wp-sim .wp-blue-button,#wp-sim .retro-content .button{display:inline-block;background:var(--wp-blue);border:1px solid var(--wp-blue);border-radius:3px;color:#fff!important;text-decoration:none;font-size:13px;font-weight:400;padding:7px 12px;line-height:1.6}
+#wp-sim .wp-blue-button:hover,#wp-sim .retro-content .button:hover{background:var(--wp-blue-hover)}
+#wp-sim a{color:var(--wp-blue)}
+#wp-sim a:focus-visible,#wp-sim button:focus-visible{outline:2px solid #2271b1;outline-offset:2px}
+#wp-sim .wp-dash-columns{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,1fr);gap:20px;align-items:start}
+#wp-sim .wp-dashboard-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+#wp-sim .wp-actions-list{display:flex;flex-direction:column;gap:7px}
+#wp-sim .wp-actions-list button{background:none;border:0;color:#2271b1;text-align:left;padding:4px 0}
+#wp-sim .wp-actions-list button:hover{text-decoration:underline}
+#wp-sim .wp-about-note{font-size:13px;color:#50575e}
+#wp-sim .wp-screen-meta{display:flex;justify-content:flex-end;gap:9px;margin:-24px -32px 24px}
+#wp-sim .wp-screen-meta span{display:inline-block;background:#fff;border:1px solid #dcdcde;border-top:0;padding:5px 13px;color:#646970;font-size:12px}
+#wp-sim .wp-table-controls{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-bottom:12px}
+#wp-sim .wp-tab-links{display:flex;gap:0;align-items:center}
+#wp-sim .wp-tab-links button{padding:0 10px 0 0;border:0;background:none;color:#2271b1;font-size:13px}
+#wp-sim .wp-tab-links button+button{border-left:1px solid #9c9e9f;padding-left:10px}
+#wp-sim .wp-tab-links button[aria-pressed=true]{color:#1d2327;font-weight:600}
+#wp-sim .wp-table-head{display:grid;grid-template-columns:minmax(0,1fr) 150px 135px;gap:12px;background:#fff;border:1px solid #c3c4c7;border-bottom:0;padding:9px 15px;color:#2c3338;font-size:13px}
+#wp-sim .wp-list-table{border:1px solid #c3c4c7;background:#fff}
+#wp-sim .wp-list-row{display:grid;grid-template-columns:minmax(0,1fr) 150px 135px;gap:12px;padding:15px;border-bottom:1px solid #dcdcde;align-items:start}
+#wp-sim .wp-list-row:nth-child(even){background:#f6f7f7}
+#wp-sim .wp-list-row:last-child{border-bottom:0}
+#wp-sim .wp-entry-wrap{display:flex;gap:15px;min-width:0}
+#wp-sim .wp-entry-img{width:110px;height:88px;flex:none;object-fit:cover;object-position:top;background:#eee;border:1px solid #dcdcde}
+#wp-sim .wp-entry-title{font-size:14px;font-weight:600;margin:0 0 6px;color:#2271b1;line-height:1.45}
+#wp-sim .wp-entry-desc{font-size:13px;line-height:1.6;color:#3c434a;margin:0 0 8px}
+#wp-sim .wp-entry-note{display:block;font-size:12px;color:#646970}
+#wp-sim .wp-entry-actions a{display:inline-block;font-size:12px;margin:6px 10px 0 0}
+#wp-sim .wp-entry-type,#wp-sim .wp-entry-status{font-size:13px;color:#50575e;line-height:1.5}
+#wp-sim .wp-entry-status span{color:#208043}
+#wp-sim .wp-original-intro{margin:0 0 20px;font-size:14px;line-height:1.75;color:#50575e;max-width:810px}
+#wp-sim .wp-entry-intro-title{font-size:20px;font-weight:500;margin:0 0 10px}
+#wp-sim .wp-bottom-bar{margin-top:32px;padding:12px 0 20px;border-top:1px solid #dcdcde;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#646970;font-size:12px}
+#wp-sim .wp-bottom-bar a{color:#2271b1}
+#wp-sim .wp-showcase .hero,#wp-sim .wp-showcase .featured-work,#wp-sim .wp-showcase .skills,#wp-sim .wp-showcase .about,#wp-sim .wp-showcase .contact,#wp-sim .wp-showcase .site-footer{display:block!important;background:transparent!important;color:#1d2327!important;min-height:0!important;margin:0!important;padding:0!important;text-align:left!important}
+#wp-sim .wp-showcase .hero-content{display:block;text-align:left;max-width:none}
+#wp-sim .wp-showcase .hero-left{max-width:none}
+#wp-sim .wp-showcase .hero .hero-visual{display:none}
+#wp-sim .wp-showcase .hero h1{font-size:clamp(25px,3.2vw,39px);line-height:1.19;letter-spacing:-.025em;max-width:900px;margin:0 0 14px}
+#wp-sim .wp-showcase .hero .hero-text{max-width:900px;margin:18px 0;font-size:15px;line-height:1.75;color:#3c434a}
+#wp-sim .wp-showcase .hero .eyebrow{margin:0 0 12px;color:#646970;font-size:12px}
+#wp-sim .wp-showcase .hero .button{background:#2271b1;border-radius:3px;padding:8px 14px}
+#wp-sim .wp-showcase .skills h2,#wp-sim .wp-showcase .about h2,#wp-sim .wp-showcase .contact h2{font-size:21px;font-weight:500;letter-spacing:0;margin:0 0 16px}
+#wp-sim .wp-showcase .skills-intro{font-size:14px;color:#50575e;margin:0 0 23px}
+#wp-sim .wp-showcase .skills .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+#wp-sim .wp-showcase .skills .skills-group{padding:18px;border:1px solid #dcdcde;border-radius:0;background:#fff;transform:none;box-shadow:none}
+#wp-sim .wp-showcase .skills .skills-group h3{font-size:17px;color:#1d2327}
+#wp-sim .wp-showcase .skills .skills-group .skill-description{font-size:14px}
+#wp-sim .wp-showcase .skills .skill-icon{border-radius:0;border-color:#c3c4c7;color:#2271b1}
+#wp-sim .wp-showcase .skills .skill-tools-label{color:#646970}
+#wp-sim .wp-showcase .skills .skill-tool-tags span{border-radius:2px;background:#f6f7f7;border-color:#dcdcde;color:#2c3338}
+#wp-sim .wp-showcase .about .about-grid{display:block;max-width:900px}
+#wp-sim .wp-showcase .about .about-copy{max-width:none}
+#wp-sim .wp-showcase .about .about-copy p{font-size:15px;line-height:1.8;color:#3c434a}
+#wp-sim .wp-showcase .contact .contact-inner{display:block;max-width:none;text-align:left}
+#wp-sim .wp-showcase .contact .contact-kicker{color:#646970;font-size:12px}
+#wp-sim .wp-showcase .contact h2{font-size:23px}
+#wp-sim .wp-showcase .contact p{font-size:15px;color:#3c434a}
+#wp-sim .wp-showcase .contact .button{border-radius:3px;background:#2271b1}
+#wp-sim .wp-showcase .contact .contact-email a{color:#2271b1}
+#wp-sim .wp-showcase .site-footer{background:transparent!important;border-top:0;padding:0!important}
+#wp-sim .wp-profile-table{border:1px solid #c3c4c7;background:white;padding:20px}
+#wp-sim .wp-profile-top{display:flex;gap:15px;align-items:center;margin:0 0 18px;padding:0 0 18px;border-bottom:1px solid #dcdcde}
+#wp-sim .wp-avatar{width:55px;height:55px;background:#dcdcde;color:#666;display:flex;justify-content:center;align-items:center;font-size:29px;border-radius:2px}
+#wp-sim .wp-profile-name{font-size:19px;font-weight:600}
+#wp-sim .wp-profile-job{color:#646970;font-size:13px}
+#wp-sim .wp-label{font-weight:600;margin:0 0 4px}
+#wp-sim .wp-skill-tools-original .skills{padding:0!important}
+#wp-sim .wp-dash-welcome .hero .button{margin:8px 0 0}
+#wp-sim .wp-mobile-toggle{display:none;background:none;border:0;color:white;padding:5px;font-size:19px}
+@media(max-width:900px){#wp-sim .wp-dash-columns{grid-template-columns:1fr}#wp-sim .wp-main{padding:19px}#wp-sim .wp-screen-meta{margin:-19px -19px 18px}}
+@media(max-width:700px){#wp-sim .wp-mobile-toggle{display:inline-block}#wp-sim .wp-topbar{padding:0 9px}#wp-sim .wp-topbar .wp-top-left{gap:9px}#wp-sim .wp-topbar .wp-top-right{gap:0}#wp-sim .wp-topbar .wp-hide-mobile{display:none}#wp-sim .wp-sidebar{width:48px}#wp-sim .wp-sidebar .wp-side-link{justify-content:center;padding:11px 0;gap:0;border-left-width:3px}#wp-sim .wp-sidebar .wp-side-link span{display:none}#wp-sim .wp-sidebar.is-expanded{width:175px}#wp-sim .wp-sidebar.is-expanded .wp-side-link{justify-content:flex-start;padding:11px 7px;gap:8px}#wp-sim .wp-sidebar.is-expanded .wp-side-link span{display:inline}#wp-sim .wp-main{padding:17px 12px 38px}#wp-sim .wp-screen-meta{margin:-17px -12px 16px}#wp-sim .wp-table-head{display:none}#wp-sim .wp-list-row{grid-template-columns:1fr;gap:7px}#wp-sim .wp-entry-type,#wp-sim .wp-entry-status{padding-left:0;font-size:12px}#wp-sim .wp-entry-img{width:75px;height:70px}#wp-sim .wp-panel-body{padding:14px}#wp-sim .wp-heading{font-size:22px}#wp-sim .wp-showcase .hero h1{font-size:27px}}
+@media(prefers-reduced-motion:reduce){#wp-sim *{transition:none!important;scroll-behavior:auto!important}}
