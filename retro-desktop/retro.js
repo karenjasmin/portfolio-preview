@@ -66,7 +66,8 @@
   makeWindow("contact","Contact Me",contact);
   icons.forEach(([id,label,kind])=>{
     const b=document.createElement("button");b.className="retro-shortcut";b.type="button";
-    b.innerHTML=iconSVG(kind)+"<span></span>";b.querySelector("span").textContent=label;
+    const images={projects:"My%20Documents.png",about:"System%20Information.png",skills:"Control%20Panel.png",contact:"Email.png"};
+    b.innerHTML='<img src="'+images[id]+'" alt="" width="48" height="48"><span></span>';b.querySelector("span").textContent=label;
     b.addEventListener("click",()=>open(id));shortcutBox.append(b);
     const m=document.createElement("button");m.type="button";m.textContent=label;
     m.addEventListener("click",()=>open(id));menu.append(m);
